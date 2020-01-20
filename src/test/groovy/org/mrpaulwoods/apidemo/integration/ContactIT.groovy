@@ -46,9 +46,9 @@ class ContactIT extends Specification {
 
         then:
         ret.statusCode == HttpStatus.OK
-        ret.body.content[0].firstName == "first0"
-        ret.body.content[0].middleName == "middle0"
-        ret.body.content[0].lastName == "last0"
+        ret.body.content[0].firstName == "first1"
+        ret.body.content[0].middleName == "middle1"
+        ret.body.content[0].lastName == "last1"
     }
 
     def "index gets the second page of 10"() {
@@ -57,12 +57,12 @@ class ContactIT extends Specification {
 
         then:
         ret.statusCode == HttpStatus.OK
-        ret.body.content[0].firstName == "first10"
-        ret.body.content[0].middleName == "middle10"
-        ret.body.content[0].lastName == "last10"
-        ret.body.content[9].firstName == "first19"
-        ret.body.content[9].middleName == "middle19"
-        ret.body.content[9].lastName == "last19"
+        ret.body.content[0].firstName == "first11"
+        ret.body.content[0].middleName == "middle11"
+        ret.body.content[0].lastName == "last11"
+        ret.body.content[9].firstName == "first20"
+        ret.body.content[9].middleName == "middle20"
+        ret.body.content[9].lastName == "last20"
     }
 
     def "create a new contact"() {
@@ -94,9 +94,9 @@ class ContactIT extends Specification {
         then:
         ret.body.id == 100
         ret.statusCode == HttpStatus.OK
-        ret.body.firstName == "first99"
-        ret.body.middleName == "middle99"
-        ret.body.lastName == "last99"
+        ret.body.firstName == "first100"
+        ret.body.middleName == "middle100"
+        ret.body.lastName == "last100"
     }
 
     def "update a contact"() {
