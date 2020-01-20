@@ -18,7 +18,7 @@ class ApidemoApplication {
     }
 
     @Bean
-    Docket petApi() {
+    Docket myApi() {
         new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.any())
