@@ -67,4 +67,9 @@ class ContactService {
         contact
     }
 
+    long count() {
+        log.debug("count()")
+        contactRepository.count()
+    }
+
 }

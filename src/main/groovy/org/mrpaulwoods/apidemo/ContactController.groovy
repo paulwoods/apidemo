@@ -9,23 +9,26 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
+import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 import javax.validation.Valid
 
 @RestController
+@RequestMapping("/contact")
 @Slf4j
 class ContactController {
 
     private final ContactService contactService
 
     ContactController(
-            ContactService contactService) {
+            ContactService contactService
+    ) {
         this.contactService = contactService
     }
 
     @GetMapping
-    ResponseEntity<Page<Contact>> search(@RequestBody @Valid Pageable pageable) {
+    ResponseEntity<Page<Contact>> search(Pageable pageable) {
         log.info("search(pageable:$pageable)")
         ResponseEntity.ok contactService.search(pageable)
     }

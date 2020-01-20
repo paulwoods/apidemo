@@ -127,4 +127,15 @@ class ContactServiceSpec extends Specification {
         ret == page1
     }
 
+    def "count delegates to the repository"() {
+        when:
+        def ret = service.count()
+
+        then:
+        1 * contactRepository.count() >> 123
+
+        and:
+        ret == 123
+    }
+
 }

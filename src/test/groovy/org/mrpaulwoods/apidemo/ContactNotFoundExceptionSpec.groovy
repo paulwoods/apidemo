@@ -1,3 +1,5 @@
+package org.mrpaulwoods.apidemo
+
 import org.mrpaulwoods.apidemo.ContactNotFoundException
 
 class ContactNotFoundExceptionSpec {

@@ -1,4 +1,4 @@
-package org.mrpaulwoods.apidemo
+package org.mrpaulwoods.apidemo.integration
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
