@@ -22,9 +22,9 @@ class Bootstrap {
     @PostConstruct
     void bootstrap() {
         log.info("bootstrap()")
-        if(0L == contactService.count()) {
+        if (0L == contactService.count()) {
             (0..1000).each {
-                contactService.create new ContactForm(firstName: "first$it", middleName:"middle$it", lastName:"last$it")
+                contactService.create new ContactForm(firstName: "first$it", middleName: "middle$it", lastName: "last$it")
             }
         }
 

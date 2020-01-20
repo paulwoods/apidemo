@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler
 class ErrorHandler {
 
     @ExceptionHandler(ContactNotFoundException)
-    public ResponseEntity<Map> handle(ContactNotFoundException ex) {
-        ResponseEntity.status(HttpStatus.NOT_FOUND).body([message:ex.message])
+    ResponseEntity<Map> handle(ContactNotFoundException ex) {
+        ResponseEntity.status(HttpStatus.NOT_FOUND).body([message: ex.message])
     }
 
 }

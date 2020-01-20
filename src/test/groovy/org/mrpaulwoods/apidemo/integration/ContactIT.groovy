@@ -5,8 +5,6 @@ import org.mrpaulwoods.apidemo.ContactService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.web.server.LocalServerPort
-import org.springframework.data.domain.Page
-import org.springframework.data.domain.PageRequest
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.http.client.ClientHttpResponse
@@ -31,15 +29,15 @@ class ContactIT extends Specification {
         // tell restTemplate to not throw exceptions on check http statuses
         restTemplate.setErrorHandler(new ResponseErrorHandler() {
             @Override
-            public boolean hasError(ClientHttpResponse response) throws IOException {
+            boolean hasError(ClientHttpResponse response) throws IOException {
                 return false
             }
 
             @Override
-            public void handleError(ClientHttpResponse response) throws IOException {
+            void handleError(ClientHttpResponse response) throws IOException {
                 // do nothing
             }
-        });
+        })
     }
 
     def "index by default gets the first 200 records"() {

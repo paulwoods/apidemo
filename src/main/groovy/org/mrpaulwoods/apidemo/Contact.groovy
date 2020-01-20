@@ -1,7 +1,6 @@
 package org.mrpaulwoods.apidemo
 
 import groovy.transform.Canonical
-import groovy.transform.ToString
 
 import javax.persistence.Column
 import javax.persistence.Entity

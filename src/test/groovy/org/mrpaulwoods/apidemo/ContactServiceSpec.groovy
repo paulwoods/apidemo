@@ -27,7 +27,7 @@ class ContactServiceSpec extends Specification {
 
         then:
         1 * contactRepository.save(_) >> { Contact c ->
-             c.id = 100
+            c.id = 100
             c
         }
 

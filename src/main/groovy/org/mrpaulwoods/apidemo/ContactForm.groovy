@@ -2,7 +2,6 @@ package org.mrpaulwoods.apidemo
 
 import com.sun.istack.NotNull
 
-import javax.persistence.Column
 import javax.validation.constraints.Size
 
 class ContactForm {
