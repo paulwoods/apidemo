@@ -1,13 +1,19 @@
 # apidemo
 A repo used to help teach api design and swagger/openapi integration.
 
-The generated swagger file:
+## Run
 
+gradle bootRun
+
+## Exposed swagger endpoints
+
+* The generated swagger file:
 http://localhost:8080/v2/api-docs
 
-The generated swagger ui:
-
+* The generated swagger ui:
 http://localhost:8080/swagger-ui.html
+
+## Adding Swagger
 
 Two add swagger to an existing project do these:
 1. add the dependencies
